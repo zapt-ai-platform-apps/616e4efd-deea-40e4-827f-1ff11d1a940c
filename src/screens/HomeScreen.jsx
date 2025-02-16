@@ -28,7 +28,7 @@ export default function HomeScreen() {
       </header>
       {mode === 'home' && (
         <>
-          <div className="flex justify-center items-center p-4 gap-4">
+          <div className="flex justify-center items-center p-4 gap-4 mt-8">
             <button onClick={() => setMode('calendar')} className="cursor-pointer bg-orange-500 text-white px-4 py-2 rounded">
               Calendar
             </button>

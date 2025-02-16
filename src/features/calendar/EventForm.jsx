@@ -47,7 +47,7 @@ export default function EventForm({ eventForm, setEventForm, addEvent, events })
           Add Event
         </button>
       </form>
-      <div className="mt-4">
+      <div className="mt-4 overflow-y-auto max-h-60">
         <h3 className="text-lg font-bold">Events</h3>
         {events.length === 0 ? (
           <p>No events added.</p>

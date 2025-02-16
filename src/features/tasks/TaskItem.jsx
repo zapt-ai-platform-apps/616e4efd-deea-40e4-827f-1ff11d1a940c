@@ -22,7 +22,7 @@ export default function TaskItem({ task, onCompleteTask, onDeleteTask }) {
     <div 
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      className={`p-4 border mb-2 rounded ${task.completed ? 'line-through bg-green-100' : 'bg-gray-100'} cursor-pointer`}
+      className={`p-4 border mb-2 rounded ${task.completed ? 'line-through bg-green-100' : 'bg-gray-100'} text-black cursor-pointer`}
     >
       <div><strong>{task.task}</strong></div>
       <div>Start: {task.startTime} | End: {task.endTime}</div>
