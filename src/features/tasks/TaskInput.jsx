@@ -25,7 +25,7 @@ export default function TaskInput({ onAddTask }) {
           value={task} 
           onChange={(e) => setTask(e.target.value)} 
           placeholder="Task" 
-          className="w-full border p-2 box-border"
+          className="w-full border p-2 box-border dark:text-black"
           required
         />
       </div>
@@ -35,7 +35,7 @@ export default function TaskInput({ onAddTask }) {
           value={startTime} 
           onChange={(e) => setStartTime(e.target.value)} 
           placeholder="Start Time" 
-          className="w-full border p-2 box-border"
+          className="w-full border p-2 box-border dark:text-black"
           required
         />
       </div>
@@ -45,11 +45,15 @@ export default function TaskInput({ onAddTask }) {
           value={endTime} 
           onChange={(e) => setEndTime(e.target.value)} 
           placeholder="End Time" 
-          className="w-full border p-2 box-border"
+          className="w-full border p-2 box-border dark:text-black"
           required
         />
       </div>
-      <button type="submit" disabled={isSubmitting} className="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded">
+      <button 
+        type="submit" 
+        disabled={isSubmitting} 
+        className="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded"
+      >
         {isSubmitting ? "Adding..." : "Add Task"}
       </button>
     </form>
