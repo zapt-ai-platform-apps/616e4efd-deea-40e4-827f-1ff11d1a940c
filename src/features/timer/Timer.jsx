@@ -24,29 +24,41 @@ export default function Timer({ onBack }) {
     }
   }, [isRunning, timeLeft]);
 
+  const getOptionLabel = (opt) => {
+    if (opt === 1) return '1 minute';
+    if (opt === 60) return '1 hour';
+    return `${opt} minutes`;
+  };
+
   return (
-    <div className="p-4">
-      <button onClick={onBack} className="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded mb-4">
+    <div className="p-8 flex flex-col items-center justify-center">
+      <button 
+        onClick={onBack} 
+        className="cursor-pointer bg-blue-500 text-white px-6 py-3 rounded mb-6"
+      >
         Back
       </button>
+      <h1 className="text-3xl font-bold mb-6 text-center">SnapTasks</h1>
       {!isRunning ? (
-        <div>
-          <p>Select timer duration (minutes):</p>
-          <div className="flex gap-2">
+        <div className="flex flex-col items-center">
+          <p className="text-xl mb-4">Select timer duration:</p>
+          <div className="flex gap-4">
             {options.map(opt => (
               <button 
                 key={opt} 
-                onClick={() => startTimer(opt)} 
-                className="cursor-pointer bg-yellow-500 text-white px-4 py-2 rounded"
+                onClick={() => startTimer(opt)}
+                className="cursor-pointer bg-yellow-500 text-white px-6 py-3 rounded"
               >
-                {opt} {opt === 60 ? '1 hour' : `${opt} min`}
+                {getOptionLabel(opt)}
               </button>
             ))}
           </div>
         </div>
       ) : (
         <div>
-          <p className="text-xl">Time left: {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}</p>
+          <p className="text-xl">
+            Time left: {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}
+          </p>
         </div>
       )}
     </div>
