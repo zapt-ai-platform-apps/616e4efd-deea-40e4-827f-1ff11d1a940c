@@ -18,9 +18,9 @@ Sentry.init({
 // Add PWA support
 window.progressierAppRuntimeSettings = {
   uid: import.meta.env.VITE_PUBLIC_APP_ID,
-  icon512: "https://supabase.zapt.ai/storage/v1/render/image/public/icons/c7bd5333-787f-461f-ae9b-22acbc0ed4b0/55145115-0624-472f-96b9-d5d88aae355f.png?width=512&height=512",
-  name: 'New App',
-  shortName: 'New App',
+  icon512: "https://supabase.zapt.ai/storage/v1/render/image/public/icons/616e4efd-deea-40e4-827f-1ff11d1a940c/6f49ac56-8203-49d7-85f2-9a572b944243.png?width=512&height=512",
+  name: 'SnapTasks',
+  shortName: 'SnapTasks',
 };
 
 let progressierScript = document.createElement('script');
